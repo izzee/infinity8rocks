@@ -1,6 +1,6 @@
 <template>
   <div class="page-content">
-    <nuxt-link 
+    <!-- <nuxt-link 
       class="post"
       v-for="post in posts"
       :key="post.slug"
@@ -13,7 +13,7 @@
         <p v-html="post.title" />
         <p v-html="formatDate(post.createdAt)" />
       </div>
-    </nuxt-link>
+    </nuxt-link> -->
   </div>
 </template>
 

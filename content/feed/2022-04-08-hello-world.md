@@ -1,4 +1,4 @@
 ---
 title: Hello world
-image: /images/back-cover.jpeg
+image: /images/2022-calendar/back-cover.jpeg
 ---

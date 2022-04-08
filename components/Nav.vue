@@ -20,8 +20,8 @@
       opacity: 1;
     }
     to {
-      transform: scale(.75);
-      filter: blur(4px);
+      transform: scale(.6);
+      filter: blur(6px);
       opacity: .6;
     }
   }
@@ -80,7 +80,7 @@
       height: 100%;
       max-height: 50vh;
       object-fit: contain;
-      animation: pulse 4s infinite alternate-reverse;
+      animation: pulse 16s infinite alternate-reverse;
     }
   }
 
@@ -99,11 +99,60 @@
       line-height: 2;
       font-weight: 700;
       text-transform: uppercase;
+      position: relative;
+        transition: color .5s;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 120%;
+        height: 80%;
+        border-radius: 100%;
+        opacity: 0;
+        z-index: -1;
+        filter: blur(8px);
+        transform: translate(-50%, -50%);
+        transition: opacity .5s;
+        @include bp(md) {
+          min-width: 160px;
+          height: 80%;
+          width: 120%;
+          filter: blur(10px);
+
+
+
+        }
+      }
+      &:nth-child(1):after {
+        background-color: $pink;
+      }
+      &:nth-child(2):after {
+        background-color: $blue;
+      }
+      &:nth-child(3):after {
+        background-color: $yellow;
+      }
       &:hover,
       &.active,
       &.nuxt-link-active,
       &.nuxt-link-exact-active {
-        color: $yellow;
+        &:nth-child(1) {
+          color: $yellow; 
+        }
+        &:nth-child(2) {
+          color: $pink; 
+        }
+        &:nth-child(3) {
+          color: $blue; 
+        }
+      }
+      &.nuxt-link-active,
+      &.nuxt-link-exact-active {
+        &:after {
+          opacity: 1;
+        }
       }
     }
 

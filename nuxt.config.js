@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxtlify',
+    title: 'INFINITY ROCKS',
     htmlAttrs: {
       lang: 'en'
     },
@@ -29,7 +29,6 @@ export default {
       '~/assets/colors.scss', 
       '~/assets/breakpoints.scss',
       '~/assets/spacing.scss'
-
     ],
   },
 
