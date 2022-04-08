@@ -1,10 +1,15 @@
+<template>
+  <div class="page-content">
+  </div>
+</template>
+
 <script>
 export default {
-  middleware: [
-    function({ redirect }) {
-      redirect('/projects');
-    },
-  ],
+  // middleware: [
+  //   function({ redirect }) {
+  //     redirect('/projects');
+  //   },
+  // ],
   head() {
     return {
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
