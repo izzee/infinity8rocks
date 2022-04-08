@@ -4,36 +4,76 @@ body {
   padding: 0;
 }
 
-body {
-  background-color: $gray;
+a {
+  text-decoration: none;
 }
+
+body {
+  background-color: $black;
+  font-family: Arial, sans-serif;
+}
+
 .default-layout {
-  width: calc(100vw - 32px);
-  max-width: 800px;
-  min-height: calc(100vh - 32px);
-  margin: 16px auto;
+  margin: auto;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-.card {
-  padding: 16px;
-  border-radius: 8px;
-  background-color: $white;
+  @include s(gap);
+  @include s(padding);
+
+  @include bp(lg) {
+    flex-direction: row;
+  }
 }
 
 main {
-  flex: 1;
-  padding: 16px;
-  border-radius: 8px;
-  background-color: $white;
+  @include bp(lg) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
 }
 
-a {
-  color: $black;
-  &:hover,
-  &.active,
-  &.nuxt-link-active {
-    color: $primary;
+.green-border {
+  border-radius: 24px;
+  background-color: $black;
+  box-shadow: 0px 0px 1px 1px $green, inset 0px 0px 1px 1px $green;
+  filter: blur(.5px);
+  @include bp(xs) {
+    box-shadow: 0px 0px 2px 2px $green, inset 0px 0px 2px 2px $green;
   }
+  @include bp(md) {
+    border-radius: 32px;
+    box-shadow: 0px 0px 4px 4px $green, inset 0px 0px 4px 4px $green;
+    // filter: blur(1px);
+  }
+}
+
+.page-content {
+  overflow: scroll;
+}
+
+body::before {
+  content: "";
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 40px;
+  background-color: $black;
+  box-shadow: 0 8px 32px 16px $black;
+
+  @include bp(md) {
+    height: 56px;
+    box-shadow: 0 16px 32px 32px $black;
+  }
+}
+
+main::after {
+  content: "";
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  background-color: $black;
+  box-shadow: 0 16px 32px 32px $black;
 }

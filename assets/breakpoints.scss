@@ -1,6 +1,6 @@
 @mixin bp($class) {
   @if $class == xs {
-    @media (min-width: 321px) {
+    @media (min-width: 350px) {
       @content;
     }
   } @else if $class == sm {
