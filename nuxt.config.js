@@ -22,13 +22,14 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/main.scss',
-    '~/assets/type.scss',
   ],
   // Global style resources - https://www.npmjs.com/package/@nuxtjs/style-resources
   styleResources: {
     scss: [
       '~/assets/colors.scss', 
-      '~/assets/breakpoints.scss'
+      '~/assets/breakpoints.scss',
+      '~/assets/spacing.scss'
+
     ],
   },
 

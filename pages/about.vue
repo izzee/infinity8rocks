@@ -1,15 +1,7 @@
 <template>
-<main>
-  <h1>About</h1>
-</main>
+  <div class="page-content">
+  </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
+<style scoped lang="scss">
 </style>
