@@ -66,6 +66,8 @@
     display: flex;
     overflow: hidden;
     text-align: center;
+    user-select: none;
+    cursor: none;
   }
   .title-marquee {
     display: flex;
@@ -73,27 +75,18 @@
     align-items: center;
     animation: marquee 60s infinite linear;
     h1 {
-      text-transform: uppercase;
       color: $skyblue;
-      font-size: 16px;
-      line-height: 2;
+      @include f1;
     }
     img {
       height: 12px;
     }
     @include bp(xs) {
-      h1 {
-        font-size: 24px;
-      }
       img {
         height: 16px;
       }
     }
     @include bp(md) {
-      h1 {
-        font-size: 40px;
-        line-height: 1.6;
-      }
       img {
         height: 32px;
       }

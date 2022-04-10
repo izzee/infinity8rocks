@@ -1,9 +1,0 @@
-@mixin s($prop) {
-  #{$prop}: 8px;
-  @include bp(xs) {
-    #{$prop}: 16px;
-  }
-  @include bp(md) {
-    #{$prop}: 24px;
-  }
-}

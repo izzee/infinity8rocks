@@ -1,10 +1,13 @@
 [
   {
-    "title": "2022 CALENDAR",
+    "title": "2022 Calendar",
     "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id veniam necessitatibus neque, excepturi tempora magni omnis debitis a impedit quo, molestias fugit beatae. Impedit assumenda facere, odio vel beatae ipsum!"
   },
   {
-    "title": "Project Title",
-    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id veniam necessitatibus neque, excepturi tempora magni omnis debitis a impedit quo, molestias fugit beatae. Impedit assumenda facere, odio vel beatae ipsum!"
+    "title": "You Have Arrived",
+    "text": "Email art created for the May 2018 installement of <a href='http://screen-space.info/' target='_blank'>SCREEN_</a>",
+    "images": [
+      "you_have_arrived.jpg"
+    ]
   }
 ]

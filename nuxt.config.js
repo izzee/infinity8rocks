@@ -28,7 +28,7 @@ export default {
     scss: [
       '~/assets/colors.scss', 
       '~/assets/breakpoints.scss',
-      '~/assets/spacing.scss'
+      '~/assets/mixins.scss'
     ],
   },
 

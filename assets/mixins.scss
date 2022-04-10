@@ -1,0 +1,56 @@
+@mixin s($prop) {
+  #{$prop}: 8px;
+  @include bp(xs) {
+    #{$prop}: 16px;
+  }
+  @include bp(md) {
+    #{$prop}: 24px;
+  }
+}
+
+@mixin shadow-border($color) {
+  box-shadow: 0 0 1px 1px #{$color}, 0 0 1px 1px #{$color} inset;
+  @include bp(xs) {
+    box-shadow: 0 0 2px 2px #{$color}, 0 0 2px 2px #{$color} inset;
+  }
+  @include bp(md) {
+    box-shadow: 0 0 4px 4px #{$color}, 0 0 4px 4px #{$color} inset;
+  }
+
+}
+
+@mixin border($color) {
+  border: 2px #{$color} solid;
+  @include bp(xs) {
+    border: 4px #{$color} solid;
+  }
+  @include bp(md) {
+    border: 8px #{$color} solid;
+  }
+}
+
+@mixin rounded {
+  border-radius: 16px;
+  @include bp(xs) {
+    border-radius: 24px;
+  }
+  @include bp(md) {
+    border-radius: 32px;
+  }
+}
+
+@mixin f1 {
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include bp(xs) {
+    font-size: 24px;
+  }
+
+  @include bp(md) {
+    font-size: 40px;
+    line-height: 1.6;
+  }
+}

@@ -37,26 +37,21 @@ p {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  @include s(gap);
   @include bp(lg) {
     flex: 1;
-    display: flex;
-    flex-direction: column;
     min-width: 0;
   }
 }
 
 .green-border {
-  border-radius: 16px;
-  background-color: $black;
-  box-shadow: 0px 0px 1px 1px $green, inset 0px 0px 1px 1px $green;
+  background: $black;
+  @include rounded;
+  @include shadow-border($green);
   filter: blur(.5px);
-  @include bp(xs) {
-    border-radius: 24px;
-    box-shadow: 0px 0px 2px 2px $green, inset 0px 0px 2px 2px $green;
-  }
   @include bp(md) {
-    border-radius: 32px;
-    box-shadow: 0px 0px 4px 4px $green, inset 0px 0px 4px 4px $green;
     filter: blur(1px);
   }
 }
@@ -93,11 +88,32 @@ main::after {
   }
 }
 
-
+.page-exit-active,
 .page-enter-active {
-  transition: opacity 0.5s;
+  transition: opacity 1s;
 }
 .page-enter,
 .page-leave-to {
   opacity: 0;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(.6);
+    filter: blur(6px);
+    opacity: .6;
+  }
+}
+
+.scrollbar {
+  @include s(width);
+  position: sticky;
+  top: 24px;
+  height: calc(100vh - 48px);
+  @include shadow-border($blue)
 }

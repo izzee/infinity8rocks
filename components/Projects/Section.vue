@@ -3,7 +3,11 @@
     <h2 class="section-title" v-html="project.title"/>
     <div class="section-body">
       <p v-html="project.text"/>
-      <p v-html="project.images"/>
+      <nuxt-img 
+        v-for="(image, index) in project.images"
+        :key="index"
+        :src="`images/projects/${image}`"
+      />
     </div>
   </section>
 </template>
@@ -21,15 +25,11 @@ export default {
 
 <style lang="scss" scoped>
   section {
-    border-radius: 16px;
+    @include rounded;
     background-color: $white;
     overflow: hidden;
-    @include s(margin-top);
-    @include bp(xs) {
-      border-radius: 24px;
-    }
-    @include bp(md) {
-      border-radius: 32px;
+    & + section {
+      @include s(margin-top);
     }
   }
   .section-title {
@@ -53,7 +53,28 @@ export default {
     }
   }
   .section-body {
+    text-align: center;
+
     @include s(padding);
+    display: flex;
+    flex-direction: column;
+    @include s(gap);
     min-height: calc(100vh - 400px);
+
+    img {
+      width: 100%;
+      margin: auto;
+      box-shadow: 0 0 64px #00000011;
+      @include rounded;
+      @include bp(md) {
+        width: calc(100% - 96px);
+      }
+
+    }
+    
+
+    a {
+      color: $blue;
+    }
   }
 </style>

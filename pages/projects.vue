@@ -1,10 +1,12 @@
 <template>
   <div class="page-content">
-    <ProjectsSection 
-      v-for="(project, index) in projects" 
-      :project="project" 
-      :key="index"
-    />
+    <div class="projects-wrapper">
+      <ProjectsSection 
+        v-for="(project, index) in projects" 
+        :project="project" 
+        :key="index"
+      />
+    </div>
   </div>
 </template>
 
@@ -21,3 +23,9 @@
     },
   };
 </script>
+
+<style scoped lang="scss">
+  .page-content {
+    overflow: scroll;
+  }
+</style>

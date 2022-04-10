@@ -13,26 +13,7 @@
 
 <style scoped lang="scss">
 
-  @keyframes pulse {
-    from {
-      transform: scale(1);
-      filter: blur(0);
-      opacity: 1;
-    }
-    to {
-      transform: scale(.6);
-      filter: blur(6px);
-      opacity: .6;
-    }
-  }
-  @keyframes blur {
-    from {
-      filter: blur(1px);
-    }
-    to {
-      filter: blur(2vw);
-    }
-  }
+
 
   .site-nav {
     display: flex;
@@ -66,6 +47,8 @@
     justify-content: space-between;
     overflow: hidden;
     background-color: $green;
+    cursor: none;
+
     @include bp(md) {
       flex: 1;
       width: 50%;
@@ -95,12 +78,12 @@
     a {
       display: block;
       color: $skyblue;
-      font-size: 16px;
-      line-height: 2;
-      font-weight: 700;
       text-transform: uppercase;
       position: relative;
-        transition: color .5s;
+      transition: color .5s;
+      user-select: none;
+
+      @include f1;
 
       &:after {
         content: "";
@@ -108,7 +91,7 @@
         left: 50%;
         top: 50%;
         width: 120%;
-        height: 80%;
+        height: 60%;
         border-radius: 100%;
         opacity: 0;
         z-index: -1;
@@ -116,23 +99,20 @@
         transform: translate(-50%, -50%);
         transition: opacity .5s;
         @include bp(md) {
-          min-width: 160px;
           height: 80%;
-          width: 120%;
-          filter: blur(10px);
 
-
-
+          min-width: 160px;
+          filter: blur(12px);
         }
       }
       &:nth-child(1):after {
         background-color: $pink;
       }
       &:nth-child(2):after {
-        background-color: $blue;
-      }
-      &:nth-child(3):after {
         background-color: $yellow;
+        }
+      &:nth-child(3):after {
+        background-color: $blue;
       }
       &:hover,
       &.active,
@@ -142,10 +122,10 @@
           color: $yellow; 
         }
         &:nth-child(2) {
-          color: $pink; 
-        }
-        &:nth-child(3) {
           color: $blue; 
+          }
+        &:nth-child(3) {
+          color: $pink; 
         }
       }
       &.nuxt-link-active,
@@ -156,19 +136,8 @@
       }
     }
 
-    @include bp(xs) {
-      a {
-        font-size: 24px;
-        line-height: 2;
-      }
-    }
-
     @include bp(md) {
       flex-direction: column;
-      a {
-        font-size: 40px;
-        line-height: 1;
-      }
     }
   }
 </style>

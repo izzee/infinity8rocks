@@ -1,8 +1,9 @@
 <template>
-  <div class="default-layout">
+  <div :class="`${this.$route.name} default-layout`">
     <Nav/>
     <main>
       <PageTitle/>
+      <CustomCursor/>
       <Nuxt/>
     </main>
   </div>
