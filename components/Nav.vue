@@ -16,6 +16,7 @@
 
 
   .site-nav {
+    z-index: 100;
     display: flex;
     flex-direction: column-reverse;
     @include s(gap);

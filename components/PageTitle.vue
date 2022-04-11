@@ -68,6 +68,7 @@
     text-align: center;
     user-select: none;
     cursor: none;
+    z-index: 200;
   }
   .title-marquee {
     display: flex;

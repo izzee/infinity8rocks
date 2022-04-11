@@ -68,6 +68,7 @@ body::before {
   height: 32px;
   background-color: $black;
   box-shadow: 0 8px 32px 8px $black;
+  z-index: 100;
 
   @include bp(md) {
     height: 56px;
@@ -82,7 +83,6 @@ main::after {
   width: 100%;
   background-color: $black;
   box-shadow: 0 24px 32px 32px $black;
-
   @include bp(md) {
     box-shadow: 0 24px 32px 32px $black;
   }
