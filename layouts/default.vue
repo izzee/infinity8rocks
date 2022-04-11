@@ -3,7 +3,7 @@
     <Nav/>
     <main>
       <PageTitle/>
-      <!-- <CustomCursor/> -->
+      <CustomCursor/>
       <Nuxt/>
     </main>
   </div>
