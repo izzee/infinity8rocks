@@ -17,8 +17,8 @@ export default {
     return {
       activeImg: 0,
       images: [
-        'catgifangel.gif',
         'dancing-cats-edit.gif',
+        'catgifangel.gif',
         'glitched-logo.gif',
       ]
     }
@@ -51,9 +51,11 @@ export default {
   @include rounded;
   width: 100%;
   position: relative;
+  // max-height: 100vw;
+  // height: 100%;
+    flex: 1;
   @include bp(lg){
 
-    flex: 1;
   }
 
   img {
@@ -61,9 +63,10 @@ export default {
       position: absolute;
     }
     
-    height:100%;
+    // height:100%;
     width:100%;
     transition: opacity 3s;
+    object-fit: fill;
   }
   img:not(.active) {
     opacity: 0;
