@@ -1,12 +1,40 @@
 <template>
-  <div class="main-hero">
-    <nuxt-img src="images/dancing-cats-edit.gif" />
+  <div class="main-hero" @click="() => changeImage(1)">
+    <!-- <nuxt-img src="images/dancing-cats-edit.gif" /> -->
+    <nuxt-img 
+      v-for="(image, index) in images"
+      :key="index"
+      :src="`images/${image}`"
+      :class="activeImg === index && `active`"
+    />
+
   </div>
 </template>
 
 <script>
 export default {
-
+  data() {
+    return {
+      activeImg: 0,
+      images: [
+        'catgifangel.gif',
+        'dancing-cats-edit.gif',
+      ]
+    }
+  },
+  methods: {
+    changeImage(direction) {
+      let nextImg = this.activeImg + direction;
+      let imgLength = this.images.length;
+      if (nextImg === imgLength){
+        nextImg = 0
+      } else if(nextImg === -1){
+        nextImg = imgLength -1
+      } 
+      this.activeImg = nextImg
+      console.log(this.activeImg)
+    }
+  }
 }
 </script>
 
@@ -31,8 +59,12 @@ export default {
     @include bp(lg) {
       position: absolute;
     }
+    
     height:100%;
     width:100%;
+  }
+  img:not(.active) {
+    opacity: 0;
   }
 }
 </style>
