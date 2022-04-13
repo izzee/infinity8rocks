@@ -63,7 +63,7 @@ export default {
       position: absolute;
     }
     
-    // height:100%;
+    height:100%;
     width:100%;
     transition: opacity 3s;
     object-fit: fill;
