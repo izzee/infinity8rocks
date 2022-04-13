@@ -19,6 +19,7 @@ export default {
       images: [
         'catgifangel.gif',
         'dancing-cats-edit.gif',
+        'glitched-logo.gif',
       ]
     }
   },
@@ -62,6 +63,7 @@ export default {
     
     height:100%;
     width:100%;
+    transition: opacity 3s;
   }
   img:not(.active) {
     opacity: 0;
