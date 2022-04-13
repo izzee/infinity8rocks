@@ -34,7 +34,7 @@ export default {
     top: 0;
     position: fixed;
     background-color:white;
-    z-index: 100;
+    z-index: 200;
     mix-blend-mode: difference;
     background-image: url('/static.gif');
     background-size: 120%;

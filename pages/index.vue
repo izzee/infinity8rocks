@@ -1,5 +1,6 @@
 <template>
   <div class="page-content">
+    <MainHero/>
   </div>
 </template>
 
@@ -18,3 +19,10 @@ export default {
 };
 
 </script>
+
+<style scoped lang="scss">
+  .page-content {
+    display: flex;
+    flex: 1;
+  }
+</style>
