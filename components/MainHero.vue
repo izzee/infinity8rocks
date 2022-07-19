@@ -46,13 +46,10 @@ export default {
 
 <style scoped lang="scss">
 .main-hero{
-  // border: 4px solid $skyblue;
   overflow: hidden;
   @include rounded;
   width: 100%;
   position: relative;
-  // max-height: 100vw;
-  // height: 100%;
     flex: 1;
   @include bp(lg){
 
