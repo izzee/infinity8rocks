@@ -1,49 +1,49 @@
 <template>
   <a href="#" class="page-title green-border">
     <div class="title-marquee">
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Infinity</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Rocks</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Infinity</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Rocks</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Infinity</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Rocks</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Infinity</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Rocks</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Infinity</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Rocks</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Infinity</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Rocks</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Infinity</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Rocks</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Infinity</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Rocks</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Infinity</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Rocks</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Infinity</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Rocks</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Infinity</h1>
-      <nuxt-img src="images/infinity.svg"/>
+      <nuxt-img src="images/icons/infinity.svg"/>
       <h1>Rocks</h1>
     </div>
   </a>

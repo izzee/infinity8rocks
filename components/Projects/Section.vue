@@ -14,12 +14,12 @@
         <button 
           class="prev-btn"
           @click="() => {changeImage(-1)}">
-          <nuxt-img src="images/arrow.svg"/>
+          <nuxt-img src="images/icons/arrow.svg"/>
         </button>
         <button 
           class="next-btn"
           @click="() => {changeImage(1)}">
-          <nuxt-img src="images/arrow.svg"/>
+          <nuxt-img src="images/icons/arrow.svg"/>
         </button>
       </div>
     </div>
