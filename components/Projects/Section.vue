@@ -1,6 +1,5 @@
 <template>
-  <section>
-    <h2 class="section-title" v-html="project.title"/>
+  <SharedWindow :title="project.title" >
     <div class="section-body">
       <p v-html="project.text"/>
       <div :class="`project-images ${project.carousel && 'carousel'}`">
@@ -24,7 +23,7 @@
         </button>
       </div>
     </div>
-  </section>
+  </SharedWindow>
 </template>
 
 <script>
@@ -62,45 +61,7 @@ export default {
       @include s(margin-top);
     }
   }
-  .section-title {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), inset 0px 2px 8px #A7A7A7, inset 0px -2px 8px #A7A7A7;
-    background: linear-gradient(180deg, $white 0%, #c3c3c3 100%);
-    text-align: center;
-    font-size: 16px;
-    line-height: 2;
-    font-weight: 400;
-    border-top-right-radius: 16px;
-    border-top-left-radius: 16px;
-    @include bp(xs) {
-      padding: 8px;
-      border-top-right-radius: 24px;
-      border-top-left-radius: 24px;
-    }
-    @include bp(md) {
-      font-size: 24px;
-      border-top-right-radius: 32px;
-      border-top-left-radius: 32px;
-    }
-  }
-  .section-body {
-    text-align: center;
-    @include s(gap);
-    @include s(padding);
-    display: flex;
-    flex-direction: column;
-    img {
-      width: 100%;
-      margin: auto;
-      @include bp(md) { 
-        width: calc(100% - 96px);
-      }
-    }
-    
-    a {
-      color: $blue;
-    }
-
-    .carousel {
+  .section-body .carousel {
       position: relative;
       border: 1px solid white;
       z-index: 0;
@@ -166,5 +127,4 @@ export default {
         }
       }
     }
-  }
 </style>

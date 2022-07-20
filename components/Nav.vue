@@ -48,7 +48,6 @@
     justify-content: space-between;
     overflow: hidden;
     background-color: $green;
-    cursor: none;
 
     @include bp(md) {
       flex: 1;

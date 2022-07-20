@@ -70,8 +70,6 @@
         font-size: 32px;
         line-height: 1.25;
       }
-
     }
-
   }
 </style>
