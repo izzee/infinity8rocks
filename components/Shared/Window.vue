@@ -52,16 +52,17 @@
     @include s(padding);
     display: flex;
     flex-direction: column;
-    img {
+    
+    a {
+      color: $blue;
+    }
+
+    .project-images img {
       width: 100%;
       margin: auto;
       @include bp(md) { 
         width: calc(100% - 96px);
       }
-    }
-    
-    a {
-      color: $blue;
     }
   }
 </style>

@@ -11,11 +11,16 @@
         :to="post.path"
       >
         <div class="post-info">
+          <nuxt-img 
+            :src="post.avatar"
+            width="80px"
+            height="80px"
+
+          />
           <p v-html="post.author" />
           <p v-html="formatDate(post.createdAt)" />
         </div>
         <div class="post-content">
-
           <p v-html="post.body" />
         </div>
       </div>
@@ -27,6 +32,7 @@
 export default {
   async asyncData ({ $content }) {
     const posts = await $content('feed').fetch()
+    console.log(posts)
     return {
       posts
     }
@@ -44,7 +50,9 @@ export default {
   .page-content {
     flex:1;
     display: flex;
-    max-height: calc(100vh - 136px);
+    @include bp(sm) {
+      max-height: calc(100vh - 136px);
+    }
   }
 
   .feed {
@@ -54,37 +62,42 @@ export default {
   }
   .post {
     display: flex;
-    flex-direction: column;;
-    gap: 24px;
+    flex-direction: column;
+    align-items: start;
+    @include s(gap);
     .post-content {
       border-top-left-radius: 0;
     }
     @include bp(sm) {
       flex-direction: row;
-    //   &:nth-child(even) .post-content {
-    //     order: -1;
-    //     border-top-right-radius: 0;
-    //   }
     }
   }
 
   .post-info {
-    width: 80px;
-    height: 80px;
-    background-color: #eee;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 8px;
+    @include bp(sm) {
+      gap: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+    // flex-direction: column;
+    // align-items: start;
   }
 
   .post-content {
     @include rounded;
     flex: 1;
-    // border: 1px solid blue;
     text-align: left;
-    // border: 1px solid red;
     background-color: $blue;
     box-shadow: 0px 4px 10px #00000044, inset 0px -2px 8px #00000099;
-    p { font-size: 24px; }
-    color: white;
-    padding: 16px;
+    p { 
+      font-size: 24px; 
+      padding: 24px;
+      color: white;
+    }
     
   }
 </style>

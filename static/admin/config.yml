@@ -19,5 +19,8 @@ collections:
       - { label: 'Body', name: 'body', widget: 'string' }
       - { label: 'Avatar', name: 'avatar', widget: 'image' }
       - { label: 'Author', name: 'author', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Post Color', name: 'postColor', widget: 'color', default: '#0000ff'}
+      - { label: 'Tect Color', name: 'textColor', widget: 'color', default: '#ffffff'}
+
+
 
